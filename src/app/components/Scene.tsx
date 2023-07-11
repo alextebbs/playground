@@ -14,9 +14,7 @@ const Ring: React.FC<RingProps> = (props) => {
   const meshRef = useRef<THREE.Group>(null);
   const innerMeshRef = useRef<THREE.Group>(null);
 
-  const args = [420, 40, 10, 30];
-
-  useFrame((state, delta) => {
+  useFrame((_, delta) => {
     const scrollY = window.scrollY;
 
     console.log(scrollY);
@@ -35,7 +33,7 @@ const Ring: React.FC<RingProps> = (props) => {
       <group rotation={[0, -4, 0]} ref={innerMeshRef}>
         <group rotation={[-6.8, 0, 0]}>
           <mesh>
-            <torusGeometry args={[...args]} />
+            <torusGeometry args={[420, 40, 10, 30]} />
             <meshBasicMaterial color="#000" />
             <Wireframe thickness={0.0075} stroke={"#0f0"} />
           </mesh>
