@@ -32,7 +32,7 @@ export default function Home() {
         "A bulletin-board app styled to look like an iOS text thread.",
       tags: ["React", "Firebase"],
       link: "http://messages.alextebbs.com",
-      github: "http://github.com/alextebbs/soundboard",
+      github: "http://github.com/alextebbs/soundboard-react",
     },
     {
       name: "Ritual",
