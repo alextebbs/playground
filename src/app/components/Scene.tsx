@@ -12,23 +12,34 @@ interface RingProps extends SceneProps {}
 
 const Ring: React.FC<RingProps> = (props) => {
   const meshRef = useRef<THREE.Group>(null);
+  const innerMeshRef = useRef<THREE.Group>(null);
 
   const args = [420, 40, 10, 30];
 
   useFrame((state, delta) => {
+    const scrollY = window.scrollY;
+
+    console.log(scrollY);
+
+    if (innerMeshRef.current) {
+      innerMeshRef.current.rotation.y += 0.05 * delta;
+    }
+
     if (meshRef.current) {
-      meshRef.current.rotation.y += 0.05 * delta;
+      meshRef.current.rotation.y = scrollY * 0.005;
     }
   });
 
   return (
-    <group rotation={[0, -4, 0]} ref={meshRef}>
-      <group rotation={[-0.5, 0, 0]}>
-        <mesh>
-          <torusGeometry args={[...args]} />
-          <meshBasicMaterial color="#000" />
-          <Wireframe thickness={0.0075} stroke={"#0f0"} />
-        </mesh>
+    <group rotation={[0, 0, 0]} ref={meshRef}>
+      <group rotation={[0, -4, 0]} ref={innerMeshRef}>
+        <group rotation={[-6.8, 0, 0]}>
+          <mesh>
+            <torusGeometry args={[...args]} />
+            <meshBasicMaterial color="#000" />
+            <Wireframe thickness={0.0075} stroke={"#0f0"} />
+          </mesh>
+        </group>
       </group>
     </group>
   );

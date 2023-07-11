@@ -8,6 +8,7 @@ import {
 } from "react-icons/ai";
 import { Scene } from "./components/Scene";
 import { Suspense } from "react";
+import { WindowSize } from "./components/WindowSize";
 
 export default function Home() {
   const projects = [
@@ -46,16 +47,16 @@ export default function Home() {
     <main>
       <div className="header fixed inset-0 z-0">
         <div className="absolute z-10 text-neutral-600 top-0 left-0 p-4 uppercase tracking-[0.15em] text-[12px] group">
-          <span className="text-neutral-700 group-hover:text-[#fa0]">
+          <span className="text-neutral-800 group-hover:text-[#fa0]">
             Warning
           </span>{" "}
           This Request Has Been Logged
         </div>
         <div className="absolute z-10 text-neutral-600 bottom-0 left-0 p-4 max-w-[600px] w-full uppercase tracking-[0.15em] text-[12px] whitespace-pre overflow-hidden text-ellipsis">
-          <span className="text-neutral-700">Agent</span> <AgentString />
+          <span className="text-neutral-800">Agent</span> <AgentString />
         </div>
         <div className="absolute z-10 text-neutral-600 top-0 right-0 p-4 uppercase tracking-[0.15em] text-[12px]">
-          <span className="text-neutral-700">XY</span> Hi
+          <span className="text-neutral-800">XY</span> <WindowSize />
         </div>
       </div>
 
@@ -70,7 +71,7 @@ export default function Home() {
       </Suspense>
 
       <div className="flex min-h-screen flex-col items-center px-4 pt-[calc(50vh-19px)] pb-[45vh] relative z-20">
-        <div className="text-center w-[280px]">
+        <div className="text-center w-[280px] relative">
           <div className="absolute -top-8 w-full text-xs uppercase tracking-[0.15em] text-white">
             Status{" "}
             <span className="text-[#0f0]">
