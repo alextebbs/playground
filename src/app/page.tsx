@@ -85,8 +85,8 @@ export default function Home() {
           </h1>
           <div className="text-xs max-w-xs mb-20">
             <p className="mb-2">
-              This is a home for a couple projects I&apos;ve built to learn
-              React and NextJS.
+              This is a home for some projects I&apos;ve built with React and
+              NextJS.
             </p>
             <p>
               More about me{" "}
