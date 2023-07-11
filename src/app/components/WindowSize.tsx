@@ -17,6 +17,11 @@ export const WindowSize = () => {
     }
 
     window.addEventListener("resize", handleResize);
+
+    setDimensions({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    });
   }, []);
   return (
     <span>
