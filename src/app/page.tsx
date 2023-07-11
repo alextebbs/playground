@@ -46,13 +46,13 @@ export default function Home() {
   return (
     <main>
       <div className="header fixed inset-0 z-0">
-        <div className="sm:hidden absolute z-10 text-neutral-600 top-0 left-0 p-4 uppercase tracking-[0.15em] text-[12px] group">
+        <div className="hidden sm:block absolute z-10 text-neutral-600 top-0 left-0 p-4 uppercase tracking-[0.15em] text-[12px] group">
           <span className="text-neutral-800 group-hover:text-[#fa0]">
             Warning
           </span>{" "}
           This Request Has Been Logged
         </div>
-        <div className="sm:hidden absolute z-10 text-neutral-600 bottom-0 left-0 p-4 max-w-[600px] w-full uppercase tracking-[0.15em] text-[12px] whitespace-pre overflow-hidden text-ellipsis">
+        <div className="hidden sm:block absolute z-10 text-neutral-600 bottom-0 left-0 p-4 max-w-[600px] w-full uppercase tracking-[0.15em] text-[12px] whitespace-pre overflow-hidden text-ellipsis">
           <span className="text-neutral-800">Agent</span> <AgentString />
         </div>
         <div className="absolute z-10 text-neutral-600 top-0 right-0 p-4 uppercase tracking-[0.15em] text-[12px]">

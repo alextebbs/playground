@@ -11,7 +11,7 @@ const plex = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: "Alex Tebbs | Playground",
-  description: "A place for some project's I'm working on.",
+  description: "A place for some projects I'm working on.",
 };
 
 export default function RootLayout({
