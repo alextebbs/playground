@@ -36,7 +36,7 @@ const Ring: React.FC<RingProps> = (props) => {
             <torusGeometry args={[420, 40, 10, 40]} />
             <meshBasicMaterial color="#000" />
             <Wireframe
-              thickness={0.05}
+              thickness={0.025}
               stroke={"#0f0"}
               // simplify={true}
               squeeze={true}
