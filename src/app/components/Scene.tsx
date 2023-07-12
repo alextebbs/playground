@@ -33,9 +33,14 @@ const Ring: React.FC<RingProps> = (props) => {
       <group rotation={[0, -4, 0]} ref={innerMeshRef}>
         <group rotation={[-6.8, 0, 0]}>
           <mesh>
-            <torusGeometry args={[420, 40, 10, 30]} />
+            <torusGeometry args={[420, 40, 10, 40]} />
             <meshBasicMaterial color="#000" />
-            <Wireframe thickness={0.0075} stroke={"#0f0"} />
+            <Wireframe
+              thickness={0.05}
+              stroke={"#0f0"}
+              // simplify={true}
+              squeeze={true}
+            />
           </mesh>
         </group>
       </group>
@@ -50,6 +55,9 @@ export const Scene: React.FC<SceneProps> = (props) => {
     <Canvas
       orthographic
       gl={{ antialias: true }}
+      linear={true}
+      flat={true}
+      legacy={true}
       camera={{
         near: !behind ? 0 : 500,
         far: !behind ? 500 : 1000,
