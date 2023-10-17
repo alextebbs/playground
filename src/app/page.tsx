@@ -29,7 +29,7 @@ export default function Home() {
     {
       name: "UI",
       description: "An in-progress UI library of accessible UI artifacts.",
-      tags: ["React", "TailwindCSS", "Storybook"],
+      tags: ["React", "Tailwind", "Storybook"],
       link: "http://ui.alextebbs.com",
       github: "http://github.com/alextebbs/ui",
     },
@@ -133,7 +133,7 @@ export default function Home() {
 
                     <div className="text-xs mt-2 flex uppercase tracking-[0.15em]">
                       {project.tags.map((tag) => (
-                        <div className="pr-3 text-neutral-500" key={tag}>
+                        <div className="pr-2.5 text-neutral-500" key={tag}>
                           {tag}
                         </div>
                       ))}
