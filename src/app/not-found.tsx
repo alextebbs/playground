@@ -1,62 +1,9 @@
-import Link from "next/link";
 import { AgentString } from "./components/AgentString";
-import {
-  AiOutlineFolder,
-  AiOutlineFolderOpen,
-  AiOutlineGithub,
-  AiOutlineLink,
-} from "react-icons/ai";
 import { Scene } from "./components/Scene";
 import { Suspense } from "react";
 import { WindowSize } from "./components/WindowSize";
 
-export default function Home() {
-  const projects = [
-    {
-      name: "Mythroller",
-      description: "An app to generate D&D characters with AI.",
-      tags: ["Next.JS", "OpenAI", "Dalle-E"],
-      link: "http://mythroller.com",
-      github: "http://github.com/alextebbs/lore",
-    },
-    {
-      name: "Enigma",
-      description: "An enigma machine emulator with a 3D visualization.",
-      tags: ["React", "Three.JS"],
-      link: "http://enigma.alextebbs.com",
-      github: "http://github.com/alextebbs/enigma",
-    },
-    {
-      name: "UI",
-      description: "An in-progress UI library of accessible UI artifacts.",
-      tags: ["React", "Tailwind", "Storybook"],
-      link: "http://ui.alextebbs.com",
-      github: "http://github.com/alextebbs/ui",
-    },
-    {
-      name: "Chat",
-      description: "A simple websocket-based chat room.",
-      tags: ["Redux", "Flask", "Socket.io"],
-      link: "http://chat.alextebbs.com",
-      github: "http://github.com/alextebbs/chat",
-    },
-    {
-      name: "Messages",
-      description:
-        "A bulletin-board app styled to look like an iOS text thread.",
-      tags: ["React", "Firebase"],
-      link: "http://messages.alextebbs.com",
-      github: "http://github.com/alextebbs/soundboard-react",
-    },
-    {
-      name: "Ritual",
-      description: "A simple todo app for tracking daily habits.",
-      tags: ["React"],
-      link: "http://ritual.alextebbs.com",
-      github: "http://github.com/alextebbs/ritual",
-    },
-  ];
-
+export default function Error() {
   return (
     <main>
       <div className="header fixed inset-0 z-0">
