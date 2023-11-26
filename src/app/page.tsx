@@ -34,6 +34,13 @@ export default function Home() {
       github: "http://github.com/alextebbs/ui",
     },
     {
+      name: "Chat",
+      description: "A simple websocket-based chat room.",
+      tags: ["React", "Redux", "Flask", "Socket.io"],
+      link: "http://chat.alextebbs.com",
+      github: "http://github.com/alextebbs/chat",
+    },
+    {
       name: "Messages",
       description:
         "A bulletin-board app styled to look like an iOS text thread.",
