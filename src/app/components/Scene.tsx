@@ -1,16 +1,19 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Wireframe } from "@react-three/drei";
 
 interface SceneProps {
   behind?: boolean;
+  isErrorPage?: boolean;
 }
 
 interface RingProps extends SceneProps {}
 
 const Ring: React.FC<RingProps> = (props) => {
+  const { isErrorPage } = props;
+
   const meshRef = useRef<THREE.Group>(null);
   const innerMeshRef = useRef<THREE.Group>(null);
 
@@ -33,11 +36,15 @@ const Ring: React.FC<RingProps> = (props) => {
       <group rotation={[0, -4, 0]} ref={innerMeshRef}>
         <group rotation={[-6.8, 0, 0]}>
           <mesh>
-            <torusGeometry args={[420, 40, 10, 40]} />
+            {isErrorPage ? (
+              <torusKnotGeometry args={[320, 40, 120, 6]} />
+            ) : (
+              <torusGeometry args={[420, 40, 10, 40]} />
+            )}
             <meshBasicMaterial color="#000" />
             <Wireframe
               thickness={0.025}
-              stroke={"#0f0"}
+              stroke={isErrorPage ? "#f00" : "#0f0"}
               // simplify={true}
               squeeze={true}
             />
@@ -49,7 +56,7 @@ const Ring: React.FC<RingProps> = (props) => {
 };
 
 export const Scene: React.FC<SceneProps> = (props) => {
-  const { behind } = props;
+  const { behind, isErrorPage = false } = props;
 
   return (
     <Canvas
@@ -64,7 +71,7 @@ export const Scene: React.FC<SceneProps> = (props) => {
         position: [0, 0, -500],
       }}
     >
-      <Ring behind={behind} />
+      <Ring isErrorPage={isErrorPage} />
     </Canvas>
   );
 };
