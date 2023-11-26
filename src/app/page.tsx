@@ -36,7 +36,7 @@ export default function Home() {
     {
       name: "Chat",
       description: "A simple websocket-based chat room.",
-      tags: ["React", "Redux", "Flask", "Socket.io"],
+      tags: ["Redux", "Flask", "Socket.io"],
       link: "http://chat.alextebbs.com",
       github: "http://github.com/alextebbs/chat",
     },
